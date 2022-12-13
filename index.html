@@ -109,14 +109,6 @@
 
 <body>
     <canvas id='scope' width='1024' height='1024'></canvas>
-    <a href="https://github.com/Sean-Bradley/Oscilloscope">
-        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"
-            alt="Fork me on GitHub">
-    </a>
-    <span id="header">
-        Tutorial at
-        <a href="https://www.youtube.com/watch?v=JrOP-RJ5p1I" target="_blank">Pictures from Sound using an Oscilloscope and Fruityloops FL Studio</a>
-    </span>
     <span id="modeOptions">Mode:&nbsp;&nbsp;
         <label class="bordered">
             <input type="radio" name="rdoDisplayMode" id="0" onclick="setXYMode(0);" checked/>X Y</label>
@@ -166,21 +158,7 @@
                     </ul>
                 </p>
 
-                <p>
-                    Tutorial of the Oscillioscope setup and drawing shapes with sound
-                    <br/>
-                    <a href="https://www.youtube.com/watch?v=JrOP-RJ5p1I" target="_blank">
-                        <img src="https://img.youtube.com/vi/JrOP-RJ5p1I/0.jpg">
-                    </a>
-                </p>
-
-                <p>Source code at
-                    <a href="https://github.com/Sean-Bradley/Oscilloscope">https://github.com/Sean-Bradley/Oscilloscope</a>
-                </p>
-
-                <p>Written by
-                    <a href="https://youtube.com/seanwasere " target="_blank">SeanWasEre Youtube</a>
-                </p>
+      
             </div>
         </div>
     </div>
@@ -190,7 +168,7 @@
 
         var AudioContext = window.AudioContext || window.webkitAudioContext || false;
 
-        var XYMode = 0;
+        var XYMode = 1;
         var connected = false;
         var context;
 
@@ -223,7 +201,7 @@
             }
         }
 
-        var leftChannel = true;
+        var leftChannel = false;
         var rightChannel = true;
         function toggleLeft() {
             leftChannel = !leftChannel;
